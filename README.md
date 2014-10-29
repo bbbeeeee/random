@@ -14,6 +14,7 @@ Random algos, solutions, etc.
 - Queues
 - Vectors/ArrayLists
 - Hash Tables
+
 #### Algorithms
 - Breadth First Search
 - Depth First Search
@@ -21,7 +22,8 @@ Random algos, solutions, etc.
 - Merge Sort
 - Quick Sort
 - Tree Insert/Find/e.t.c.
-Concepts
+
+#### Concepts
 - Bit Manipulation
 - Singleton Design Pattern
 - Factory Design Pattern
