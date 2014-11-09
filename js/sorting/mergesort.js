@@ -34,3 +34,35 @@ function merge(a, b){
 	}
 	return c;                                  // send the final array up
 }
+
+// Ghetto binary search, on windows right now so can't get it in. Move to a search thing soon.
+input = [-3, -1, 1, 3, 5]
+
+function binarySearch(input, searchFor){
+    var index = Math.floor(input.length / 2);
+    // Need to make the selection from starting point    
+    return _binarySearch(input, searchFor, index);
+}
+var oldies = 0;
+function _binarySearch(input, searchFor, index){
+    console.log(input);
+    if(input[index] == searchFor) {
+        console.log('found');
+        console.log(index + oldies);
+        return index + oldies;
+        
+    }
+    else if(searchFor < input[index]){
+        console.log(Math.floor(input.slice(0, index)/2));
+        _binarySearch(input.slice(0, index), searchFor, Math.floor(input.slice(0, index).length/2));
+    } else if(searchFor > input[index]){
+        oldies += Math.floor(input.slice(0, index).length / 2) + 1;
+        _binarySearch(input.slice(index), searchFor, Math.floor(input.slice(index).length/2));                
+    }
+    
+}
+
+
+                                
+
+$('.display').text(binarySearch(input, 5));
