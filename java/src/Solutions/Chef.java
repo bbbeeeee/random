@@ -1,5 +1,9 @@
 package Solutions;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * Created by btru on 2/24/15.
  * Introduction
@@ -15,15 +19,22 @@ package Solutions;
     Write a program to convert liters to gallons. There are 3.785 liters in one gallon.
 
     Sample Input
-        The input will be a single integer representing a number of liters.
+    The input will be a single integer representing a number of liters.
         144
 
     Sample Output
-        The program must print the equivalent number of gallons, rounded to the nearest integer.
+    The program must print the equivalent number of gallons, rounded to the nearest integer.
         38
  */
 public class Chef {
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException{
+        Scanner input = new Scanner(new File("inputs/chef.txt"));
 
+        int i;
+        // Change this reading if necessary
+        while(input.hasNextLine()){
+            i = input.nextInt();
+            System.out.println((int) (i / 3.785));
+        }
     }
 }
